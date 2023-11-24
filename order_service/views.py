@@ -546,7 +546,7 @@ class PartnerUpdate(APIView):
     @staticmethod
     def post(request, *args, **kwargs):
         if not request.user.is_authenticated:
-            return Response({'Status': False, 'Error': 'Log in required'}, status=status.HTTP_403_FORBIDDEN)
+            return Response({'Status': False, 'Error': 'Вход в систему не выполнен'}, status=status.HTTP_403_FORBIDDEN)
 
         if request.user.type != 'shop':
             return Response({'Status': False, 'Error': 'Только для магазинов'}, status=status.HTTP_403_FORBIDDEN)

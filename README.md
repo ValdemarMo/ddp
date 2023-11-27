@@ -12,4 +12,4 @@ https://github.com/netology-code/python-final-diplom/tree/master
 
 2. Прайсы поставщиков загружайются/обновляются при помощи YAML-файлов. Примеры файлов `shop1.yaml` и `shop2.yaml` находятся в корневой папке проекта.
 
-3. Примеры API запросов находятся в файле `http-requests-examples.txt`
+3. Примеры API запросов находятся в файле `http-requests-examples.txt` корневой папки проекта.

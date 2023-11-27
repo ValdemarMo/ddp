@@ -1,0 +1,58 @@
+shop: МТС
+categories:
+  - id: 225
+    name: Планшеты
+  - id: 115
+    name: Медиаплееры
+  - id: 125
+    name: Аудио
+
+goods:
+  - id: 4216295
+    category: 224
+    model: apple/iphone/xs-max
+    name: Смартфон Apple iPhone XS Max 512GB (золотистый)
+    price: 110005
+    price_rrc: 116995
+    quantity: 14
+    parameters:
+      "Диагональ (дюйм)": 6.5
+      "Разрешение (пикс)": 2688x1242
+      "Встроенная память (Гб)": 512
+      "Цвет": золотистый
+  - id: 4216318
+    category: 224
+    model: apple/iphone/xr
+    name: Смартфон Apple iPhone XR 256GB (красный)
+    price: 65005
+    price_rrc: 69995
+    quantity: 9
+    parameters:
+      "Диагональ (дюйм)": 6.1
+      "Разрешение (пикс)": 1792x828
+      "Встроенная память (Гб)": 256
+      "Цвет": красный
+  - id: 4216229
+    category: 224
+    model: apple/iphone/xr
+    name: Смартфон Apple iPhone XR 256GB (черный)
+    price: 65005
+    price_rrc: 69995
+    quantity: 5
+    parameters:
+      "Диагональ (дюйм)": 6.1
+      "Разрешение (пикс)": 1792x828
+      "Встроенная память (Гб)": 256
+      "Цвет": черный
+  - id: 4672675
+    category: 224
+    model: apple/iphone/xr
+    name: Смартфон Apple iPhone XR 128GB (фиолетовый)
+    price: 60005
+    price_rrc: 64995
+    quantity: 7
+    parameters:
+      "Диагональ (дюйм)": 6.1
+      "Разрешение (пикс)": 1792x828
+      "Встроенная память (Гб)": 256
+      "Цвет": фиолетовый

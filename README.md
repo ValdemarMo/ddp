@@ -1,7 +1,10 @@
-# API-сервис заказов товаров для розничных сетей.
+# API-сервис заказа товаров для розничных сетей.
 
 ## Задание:  
-https://github.com/netology-code/python-final-diplom/tree/master
+
+'https://github.com/netology-code/python-final-diplom/tree/master'
+
+## Настройки проекта
 
 1.Настройки доступа необходимо указать в файле '.env.' Пример файла настроек 'env_example.txt' находится в корневой папке проекта.
 

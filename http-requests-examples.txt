@@ -1,6 +1,19 @@
+POST: Загрузка/обновление файла поставщика
+
+
+POST /custom_products/partner/update HTTP/1.1
+Host: example.com
+Authorization: Token YOUR_ACCESS_TOKEN
+Content-Disposition: form-data; name="file"; filename="shop1.yaml"
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+[файл shop1.yaml]
+
+
+
 POST: Регистрация нового пользователя
 
-POST /custom_products/user/register
+POST /order_service/user/register
 Content-Type: application/json
 Body:
 {
@@ -16,7 +29,7 @@ Body:
 
 POST: Авторизация пользователя
 
-POST /custom_products/user/login
+POST /corder_service/user/login
 Content-Type: application/json
 Body:
 {
@@ -28,7 +41,7 @@ Body:
 
 POST: Запрос токена для сброса пароля
 
-POST /custom_products/user/password_reset
+POST /order_service/user/password_reset
 Content-Type: application/json
 Body:
 {
@@ -39,7 +52,7 @@ Body:
 
 POST: Установка нового пароля после сброса
 
-POST /custom_products/user/password_reset/confirm
+POST /order_service/user/password_reset/confirm
 Content-Type: application/json
 Body:
 {
@@ -51,7 +64,7 @@ Body:
 
 GET: Получение корзины пользователя
 
-GET /custom_products/basket HTTP/1.1
+GET /order_service/basket HTTP/1.1
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Host: example.com
 
@@ -59,7 +72,7 @@ Host: example.com
 
 POST: Добавление товаров в корзину
 
-POST /custom_products/basket HTTP/1.1
+POST /order_service/basket HTTP/1.1
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Host: example.com
 Content-Type: application/json
@@ -81,7 +94,7 @@ Body:
 
 DELETE: Удаление товаров из корзины
 
-DELETE /custom_products/basket HTTP/1.1
+DELETE /order_service/basket HTTP/1.1
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Host: example.com
 Content-Type: application/json
@@ -95,7 +108,7 @@ Body:
 
 PUT: Обновление количества товаров в корзине
 
-PUT /custom_products/basket HTTP/1.1
+PUT /order_service/basket HTTP/1.1
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Host: example.com
 Content-Type: application/json
@@ -117,7 +130,7 @@ Body:
 
 GET: Получение заказов пользователя
 
-GET /custom_products/order
+GET /order_service/order
 Headers:
 Authorization: Token <ваш_токен>
 
@@ -125,7 +138,7 @@ Authorization: Token <ваш_токен>
 
 POST: Размещение нового заказа
 
-POST /custom_products/order
+POST /order_service/order
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json
@@ -157,7 +170,7 @@ Body:
 
 DELETE: Удаление заказов
 
-DELETE /custom_products/order
+DELETE /order_service/order
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json
@@ -170,7 +183,7 @@ Body:
 
 GET: Получение подтвержденных заказов пользователя
 
-GET /custom_products/update_order
+GET /order_service/update_order
 Headers:
 Authorization: Token <ваш_токен>
 
@@ -178,7 +191,7 @@ Authorization: Token <ваш_токен>
 
 PUT: Обновление подтвержденного заказа
 
-PUT /custom_products/update_order
+PUT /order_service/update_order
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json
@@ -202,7 +215,7 @@ Body:
 
 GET: Получение данных аккаунта пользователя
 
-GET /custom_products/user/details
+GET /order_service/user/details
 Headers:
 Authorization: Token <ваш_токен>
 
@@ -210,7 +223,7 @@ Authorization: Token <ваш_токен>
 
 PUT: Обновление данных аккаунта пользователя
 
-PUT /custom_products/user/details
+PUT /order_service/user/details
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json
@@ -226,7 +239,7 @@ Body:
 
 DELETE: Удаление пользователя
 
-DELETE /custom_products/user/details
+DELETE /order_service/user/details
 Headers:
 Authorization: Token <ваш_токен>
 
@@ -234,7 +247,7 @@ Authorization: Token <ваш_токен>
 
 GET: Получение текущего статуса поставщика
 
-GET /custom_products/partner/state
+GET /order_service/partner/state
 Headers:
 Authorization: Token <ваш_токен>
 
@@ -242,7 +255,7 @@ Authorization: Token <ваш_токен>
 
 POST: Изменение текущего статуса поставщика
 
-POST /custom_products/partner/state
+POST /order_service/partner/state
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json
@@ -255,7 +268,7 @@ Body:
 
 GET: Получение заказов поставщиками
 
-GET /custom_products/partner/orders
+GET /order_service/partner/orders
 Headers:
 Authorization: Token <ваш_токен>
 
@@ -263,7 +276,7 @@ Authorization: Token <ваш_токен>
 
 GET: Получение своих контактов покупателями
 
-GET /custom_products/user/contact
+GET /order_service/user/contact
 Headers:
 Authorization: Token <ваш_токен>
 
@@ -271,7 +284,7 @@ Authorization: Token <ваш_токен>
 
 POST: Создание нового контакта покупателя
 
-POST /custom_products/user/contact
+POST /order_service/user/contact
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json
@@ -286,7 +299,7 @@ Body:
 
 PUT: Обновление информации о контакте
 
-PUT /custom_products/user/contact
+PUT /order_service/user/contact
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json
@@ -302,7 +315,7 @@ Body:
 
 DELETE: Удаление контакта
 
-DELETE /custom_products/user/contact
+DELETE /order_service/user/contact
 Headers:
 Authorization: Token <ваш_токен>
 Content-Type: application/json

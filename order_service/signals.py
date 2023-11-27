@@ -26,13 +26,13 @@ def password_reset_token_created(sender, instance, reset_password_token, **kwarg
 
     msg = EmailMultiAlternatives(
         # title:
-        f'Токен для сброса пароля для пользователя {reset_password_token.user}',
+        f"Токен для сброса пароля для пользователя {reset_password_token.user}",
         # message:
-        f'Токен для сброса пароля: {reset_password_token.key}',
+        f"Токен для сброса пароля: {reset_password_token.key}",
         # from:
         settings.EMAIL_HOST_USER,
         # to:
-        [reset_password_token.user.email]
+        [reset_password_token.user.email],
     )
     msg.send()
 
@@ -48,13 +48,13 @@ def new_user_registered_signal(sender, user_id, **kwargs):
 
     msg = EmailMultiAlternatives(
         # title:
-        f'Токен для пользователя {user.email}',
+        f"Токен для пользователя {user.email}",
         # message:
-        f'Токен для дальнейших авторизаций: {token.key}',
+        f"Токен для дальнейших авторизаций: {token.key}",
         # from:
         settings.EMAIL_HOST_USER,
         # to:
-        [user.email]
+        [user.email],
     )
     msg.send()
 
@@ -67,16 +67,16 @@ def new_order_signal(sender, user_id, user_email, admin_emails, **kwargs):
     user_email = user_email
 
     send_mail(
-        f'Подтверждение заказа',
-        'Ваш заказ был успешно размещен.',
+        f"Подтверждение заказа",
+        "Ваш заказ был успешно размещен.",
         settings.EMAIL_HOST_USER,
         [user_email],
         fail_silently=False,
     )
 
     send_mail(
-        f'Заказ от пользователя {user_email}',
-        'У вас есть новый заказ для исполнения.',
+        f"Заказ от пользователя {user_email}",
+        "У вас есть новый заказ для исполнения.",
         settings.EMAIL_HOST_USER,
         admin_emails,
         fail_silently=False,
@@ -91,16 +91,16 @@ def updated_order_signal(sender, user_email, admin_emails, **kwargs):
     user_email = user_email
 
     send_mail(
-        f'Обновление заказа',
-        'Ваш заказ был обновлен.',
+        f"Обновление заказа",
+        "Ваш заказ был обновлен.",
         settings.EMAIL_HOST_USER,
         [user_email],
         fail_silently=False,
     )
 
     send_mail(
-        f'Изменение заказа от пользователя {user_email}',
-        'У вас есть измененный заказ для исполнения.',
+        f"Изменение заказа от пользователя {user_email}",
+        "У вас есть измененный заказ для исполнения.",
         settings.EMAIL_HOST_USER,
         admin_emails,
         fail_silently=False,

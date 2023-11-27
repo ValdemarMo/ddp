@@ -1,7 +1,7 @@
 POST: Загрузка/обновление файла поставщика
 
 
-POST /order_service/partner/update HTTP/1.1
+POST /order_service/partner/update
 Host: example.com
 Authorization: Token YOUR_ACCESS_TOKEN
 Content-Disposition: form-data; name="file"; filename="shop1.yaml"

@@ -14,5 +14,3 @@ EMAIL_HOST_PASSWORD=yyyyyyyyyyyyyyyyyyyyyyyyyy
 EMAIL_PORT=465
 EMAIL_USE_SSL=True
 
-
-YOUR_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

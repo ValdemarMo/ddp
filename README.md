@@ -1,4 +1,4 @@
-# API-сервис заказов товаров товаров для розничных сетей.
+# API-сервис заказов товаров для розничных сетей.
 
 ## Задание:  
 https://github.com/netology-code/python-final-diplom/tree/master

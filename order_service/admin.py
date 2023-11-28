@@ -79,7 +79,6 @@ class ProductInfoAdmin(admin.ModelAdmin):
         "id",
         "model",
     )
-    # pass
 
 
 @admin.register(Parameter)
@@ -94,7 +93,6 @@ class ProductParameterAdmin(admin.ModelAdmin):
         "parameter",
         "value",
     )
-    # pass
 
 
 @admin.register(Order)

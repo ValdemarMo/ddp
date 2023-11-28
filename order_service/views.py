@@ -66,15 +66,15 @@ class AllViews(APIView):
         product_url = f"{base_url}order_service/products"
         return Response(
             {
-                "message": "Добро пожаловать! Вы можете зарегистрироваться.",
+                "message_1": "Регистрация",
                 "register_url": register_url,
-                "message_2": "Если вы уже зарегистрированы, то Вы можете авторизоваться.",
+                "message_2": "Авторизация зарегистрированных пользователей",
                 "login_url": login_url,
-                "message_3": "Вы можете просмотреть список доступных категорий товаров.",
+                "message_3": "Просмотр списка доступных категорий товаров.",
                 "category_url": category_url,
-                "message_4": "Вы можете просмотреть список доступных магазинов.",
+                "message_4": "Просмотр списка доступных магазинов.",
                 "shop_url": shop_url,
-                "message_5": "Вы можете просмотреть список доступных товаров.",
+                "message_5": "Просмотр списка доступных товаров.",
                 "product_url": product_url,
             },
             status=status.HTTP_200_OK,
